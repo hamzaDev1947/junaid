@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineDown } from "react-icons/ai";
 import "./App.css";
 
 function App() {
@@ -26,21 +27,23 @@ function App() {
                   setActiveDropdown(activeDropdown === item ? null : item)
                 } // Toggle only Work
               >
-                {item} <span className="text-xs">▼</span>
+                {item} <AiOutlineDown className="text-xs mt-[2px] ml-1" />
               </button>
 
               {/* Dropdown only for Work */}
               {activeDropdown === item && (
                 <div className="absolute top-[35px] left-0 w-[275px] bg-white/5 border border-white/10 rounded-[10px] backdrop-blur-[50px] p-[15px] z-50">
                   <div className="flex items-center justify-between px-[10px] py-[7px] h-[29px] rounded-[6px] bg-[#199652] text-white text-sm cursor-pointer">
-                    Tax Software Hosting <span className="text-xs">▼</span>
+                    Tax Software Hosting{" "}
+                    <AiOutlineDown className="text-xs mt-[2px] ml-1" />
                   </div>
                   <div className="flex items-center justify-between px-[10px] py-[10px] h-[29px] text-white text-sm cursor-pointer hover:bg-white/10 rounded-[6px] mt-[10px]">
                     Accounting Software Hosting{" "}
-                    <span className="text-xs">▼</span>
+                    <AiOutlineDown className="text-xs mt-[2px] ml-1" />
                   </div>
                   <div className="flex items-center justify-between px-[10px] py-[10px] h-[29px] text-white text-sm cursor-pointer hover:bg-white/10 rounded-[6px] mt-[10px]">
-                    Application Hosting <span className="text-xs">▼</span>
+                    Application Hosting{" "}
+                    <AiOutlineDown className="text-xs mt-[2px] ml-1" />
                   </div>
                 </div>
               )}
