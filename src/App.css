@@ -9,9 +9,17 @@ body {
 }
 
 .navbar {
+  width: 810px;
+  height: 50px;
+  position: relative;
+  top: -297px;
+  left: -276px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   box-sizing: border-box;
 }
 
@@ -25,46 +33,106 @@ body {
 .logo {
   font-weight: bold;
   font-size: 24px;
+  color: #333;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
+  position: relative;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-item {
   text-decoration: none;
   color: #333;
   font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-item:hover {
+  color: #007bff;
 }
 
 .get-started-btn {
   background-color: #0066ff;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
+.get-started-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  width: 275px;
+  height: auto;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border-radius: 20px;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(153, 153, 153, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-first-item {
+  width: 235px;
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: #199652;
+  color: white;
   cursor: pointer;
+}
+
+.dropdown-other-item {
+  width: 215px;
+  height: 15px;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-other-item:hover {
+  color: #007bff;
 }
 
 .services {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: -250px;
+  left: -276px;
 }
 
-.services p {
-  margin: 0;
-  font-size: 14px;
+.services h3 {
+  margin: 10px 0;
+  color: #333;
+  font-weight: 500;
 }
 
 .main-heading {
@@ -109,23 +177,105 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    position: static;
+    padding: 15px 20px;
+  }
+
   .nav-links {
     display: none;
+    gap: 15px;
   }
 
   .menu-toggle {
     display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
   }
 
   .nav-links.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 84px;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: white;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .services {
+    position: static;
+    padding: 20px;
+  }
+  /* Add these styles to your existing App.css */
+
+  .hero-content {
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+  }
+
+  .main-heading {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .subheading {
+    color: #3cb55a;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 474px;
+  }
+
+  .primary-btn {
+    width: 243px;
+    height: 54px;
+    padding: 15px 40px;
+    border-radius: 14px;
+    background: linear-gradient(100.29deg, #3cb55a 44.18%, #0c8b4f 96.11%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .vertical-divider {
+    width: 38px;
+    height: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: rotate(-90deg);
+  }
+
+  .secondary-btn {
+    color: #ffffff;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Background gradient */
+  .App {
+    background: linear-gradient(to bottom right, #061a2c, #092b30);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    position: relative;
   }
 }
