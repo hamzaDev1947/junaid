@@ -4,3 +4,7 @@
 body {
   font-family: "Inter", sans-serif;
 }
+/* App.css */
+.bg-radial-hero {
+  background: radial-gradient(50% 58.07% at 50% 100%, #103c36 0%, #072530 100%);
+}

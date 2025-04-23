@@ -4,8 +4,9 @@ import "./App.css";
 
 function App() {
   const [activeDropdown, setActiveDropdown] = useState(null);
+
   return (
-    <div className="relative bg-gradient-to-br from-[#061a2c] to-[#092b30] min-h-screen text-white px-6 py-4">
+    <div className="relative bg-radial-hero min-h-screen text-white px-6 py-4">
       {/* Navbar */}
       <nav className="w-full max-w-[1200px]  mx-auto flex items-center justify-between px-6 py-6">
         {/* Left: Logo */}
@@ -18,7 +19,7 @@ function App() {
         </div>
 
         {/* Center: Navigation Menu */}
-        <div className="flex items-center gap-[30px] px-4 py-2 bg-white/5 border border-white/10 rounded-[10px] backdrop-blur-[50px] font-[inter] ">
+        <div className="flex items-center gap-[30px] px-4 py-2 bg-white/5 border border-white/5 rounded-[10px] backdrop-blur-[50px] font-[inter] ">
           {["Work", "Solutions", "Pricing", "Payloads"].map((item) => (
             <div className="relative" key={item}>
               <button
@@ -61,7 +62,7 @@ function App() {
 
       {/* Hero Content */}
       <div className="text-center mt-24">
-        <h1 className="font-[inter] max-w-[698px] mt-[-40px] w-full mx-auto text-center text-[34px] leading-[61px] px-4 py-10 rounded-md ">
+        <h1 className="font-[inter] font-semibold max-w-[698px] mt-[-40px] w-full mx-auto text-center text-[34px] leading-[61px] px-4 py-10 rounded-md ">
           VeritGuard: 24/7 Managed IT for <br />
           Tax & Accounting Firms
         </h1>
@@ -72,7 +73,7 @@ function App() {
         <div className="mt-10">
           {/* Tailwind-converted button layout */}
           <div className="w-[474px] h-[54px] flex items-center justify-center gap-[30px] relative mx-auto">
-            <button className="w-[243px] h-[54px] px-[40px] py-[15px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white font-[inter] text-[16px] leading-[100%] cursor-pointer">
+            <button className="w-[243px] h-[54px] px-[40px] py-[15px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white font-[inter] font-semibold text-[16px] leading-[100%] cursor-pointer">
               Let’s Get Started
             </button>
             <div className="w-[38px] h-[1px] rotate-90 border border-white opacity-20"></div>
