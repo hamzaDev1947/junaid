@@ -31,4 +31,12 @@
     font-weight: 600;
     margin-top: 16px;
   }
+  .hero-heading {
+    max-width: 1085px;
+    height: 122px;
+    font-size: 44px;
+    line-height: 61px;
+    font-weight: 600;
+    text-align: center;
+  }
 }
