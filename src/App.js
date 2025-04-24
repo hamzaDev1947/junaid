@@ -105,7 +105,7 @@ function App() {
           ))}
 
           {/* Keep Get Started at the bottom */}
-          <button className="cta w-full text-center mt-4">Get Started →</button>
+          <button className="cta w-full text-center mt-4">Get </button>
         </div>
       )}
 
