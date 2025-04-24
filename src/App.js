@@ -119,17 +119,19 @@ function App() {
           Proactive IT Support & Security for
         </p>
 
-        <div className="mt-10">
-          <div className="w-[474px] h-[54px] flex items-center justify-center gap-[30px] relative mx-auto">
-            <button className="w-[243px] h-[54px] px-[40px] py-[15px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white font-[inter] font-semibold text-[16px] leading-[100%] cursor-pointer">
-              Let’s Get Started
+         <div className="flex flex-col sm:flex-row gap-5 mt-2 sm:mt-4 items-center justify-center">
+            <button className="bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] px-4 sm:px-6 py-2 sm:py-3 rounded-[14px] w-full sm:w-auto">
+              <div className="font-semibold text-base sm:text-lg md:text-[16px] lg:text-[16px] text-white">
+                Let’s Get Started
+              </div>
             </button>
-            <div className="w-[38px] h-[1px] rotate-90 border border-white opacity-20"></div>
-            <button className="w-auto px-20px h-[22px] flex items-center justify-center text-white font-[inter] text-[18px] leading-[100%] whitespace-nowrap">
-              Schedule A Meeting
+
+            <div className="w-[38px] h-[1px] rotate-90 border border-white md:opacity-20 opacity-0"></div>
+
+            <button className="text-white text-sm sm:text-base md:text-lg  py-2 sm:py-3 rounded-md w-full sm:w-auto">
+              Schedule A Demo
             </button>
           </div>
-        </div>
       </div>
     </div>
   );
