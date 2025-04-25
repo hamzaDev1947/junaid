@@ -282,17 +282,22 @@ function App() {
       </div>
 
       {/* Section 1: Features */}
-      <section id="features" className="w-full px-6 py-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10 text-center">
-          <div className="transform -translate-x-4 -translate-y-4 bg-white/5 p-6 rounded-xl text-white backdrop-blur-md hover:bg-[#199652] transition duration-300 cursor-pointer">
-            <div className="flex flex-col items-center gap-2">
+      <section
+        id="features"
+        className="w-full px-6 py-16 transition-all duration-500 ease-in-out"
+      >
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+          {/* 1. Private Servers - Top Left */}
+          <div className="w-[198px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-4 -translate-y-4 ml-[140px]">
+            <div className="flex flex-col items-center gap-[10px]">
               <img src="/pri.svg" alt="Private Servers" className="w-6 h-6" />
               <span>Private Servers</span>
             </div>
           </div>
 
-          <div className="transform translate-x-4 -translate-y-4 bg-white/5 p-6 rounded-xl text-white backdrop-blur-md hover:bg-[#199652] transition duration-300 cursor-pointer">
-            <div className="flex flex-col items-center gap-2">
+          {/* 2. SOC 2 & FTC-Compliant - Top Right */}
+          <div className="w-[265.7px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform translate-x-4 -translate-y-4 ml-[130px] ">
+            <div className="flex flex-col items-center gap-[10px]">
               <img
                 src="/soc.svg"
                 alt="SOC 2 & FTC-Compliant"
@@ -302,8 +307,9 @@ function App() {
             </div>
           </div>
 
-          <div className="transform -translate-x-4 translate-y-4 bg-white/5 p-6 rounded-xl text-white backdrop-blur-md hover:bg-[#199652] transition duration-300 cursor-pointer">
-            <div className="flex flex-col items-center gap-2">
+          {/* 3. 24/7 Expert Support - Bottom Left */}
+          <div className="w-[234.67px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-4 translate-y-4 ml-[240px]">
+            <div className="flex flex-col items-center gap-[10px]">
               <img
                 src="/exp.svg"
                 alt="24/7 Expert Support"
@@ -313,8 +319,9 @@ function App() {
             </div>
           </div>
 
-          <div className="transform translate-x-4 translate-y-4 bg-white/5 p-6 rounded-xl text-white backdrop-blur-md hover:bg-[#199652] transition duration-300 cursor-pointer">
-            <div className="flex flex-col items-center gap-2">
+          {/* 4. 99.999% Uptime - Bottom Right */}
+          <div className="w-[203.64px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform translate-x-4 translate-y-4 mr-[30px]">
+            <div className="flex flex-col items-center gap-[10px]">
               <img src="/opt.svg" alt="99.999% Uptime" className="w-6 h-6" />
               <span>99.999% Uptime</span>
             </div>
