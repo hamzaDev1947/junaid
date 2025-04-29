@@ -177,6 +177,31 @@ function App() {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  // Green right arrow SVG
+  const ArrowRight = () => (
+    <svg
+      className="w-4 h-4 text-white"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  );
+
+  // Green down arrow SVG
+  const ArrowDown = () => (
+    <svg
+      className="w-4 h-4 text-white"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  );
   return (
     <>
       <div className="relative bg-[#072530] min-h-screen text-white px-0 py-4 font-[inter] m-8 rounded-[20px] ">
@@ -954,31 +979,34 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-white text-center p-6">
+      <div className="min-h-screen bg-white text-center p-6 ">
         {/* Header / Testimonial */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto ">
           <blockquote className="italic text-[#000000] text-[24px] mb-6 font-[inter] w-[705px] h-[58px]">
             "Verito has transformed how our firm operates. The security,
             performance, and support are unmatched in the industry."
           </blockquote>
 
           {/* Profile */}
-          <div className="flex items-center justify-center mb-2">
+          <div className="flex items-center justify-center mb-5">
             <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
+              src="/elli.png"
               alt="Jane Smith"
-              className="w-10 h-10 rounded-full mr-3"
+              className="w-16 h-16 rounded-full mr-3"
             />
             <div className="text-left">
-              <p className="font-semibold">Jane Smith, CPA</p>
-              <p className="text-green-600 text-sm">
+              <p className="font-semibold w-[156px] h-[24px] text-[20px]">
+                Jane Smith, CPA
+              </p>
+              <p className="text-green-600 text-sm text-[14px]">
                 Smith Accounting Partners
               </p>
             </div>
           </div>
 
           {/* Buttons */}
-          <div className="flex justify-center gap-2 mt-4 mb-12 flex-wrap">
+
+          <div className="flex justify-center gap-6 mt-4 mb-12 flex-wrap ">
             {["AICPA", "NYSSCPA", "IMA"].map((org) => (
               <span
                 key={org}
@@ -991,34 +1019,132 @@ function App() {
         </div>
 
         {/* FAQ Section */}
-        <h2 className="text-2xl font-bold mb-1">Frequently Asked Questions</h2>
-        <p className="text-gray-500 mb-6">Still have some questions in mind?</p>
-
-        <div className="max-w-2xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-xl p-4 shadow transition hover:shadow-md text-left"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="flex justify-between w-full items-center font-medium text-gray-800"
+        <h2 className="text-2xl font-bold mb-3 text-[36px]">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-gray-500 mb-6 text-[18px]">
+          Still have some questions in mind?
+        </p>
+        <div className="flex justify-center">
+          <div className="w-full max-w-2xl space-y-4 ">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl px-4 py-4 shadow-sm"
               >
-                <span>{faq.question}</span>
-                <span className="text-green-500 text-xl">
-                  {openIndex === index ? "-" : "+"}
-                </span>
-              </button>
-
-              {openIndex === index && (
-                <div className="mt-3 text-gray-600">
-                  <p>{faq.answer}</p>
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <p className="text-gray-800 font-medium text-sm sm:text-base">
+                    {faq.question}
+                  </p>
+                  <div className="bg-green-500 p-1.5 rounded-full">
+                    {openIndex === index ? <ArrowDown /> : <ArrowRight />}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+
+                {openIndex === index && (
+                  <div className="mt-3 text-gray-600 text-sm">
+                    <p>{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <section className="relative bg-[#072530] text-white min-h-[450px] sm:min-h-[400px] flex flex-col items-center justify-center px-4 py-10 sm:py-16 overflow-hidden">
+        {/* Floating Icons, centered as a group */}
+        <div className="relative w-full h-[260px] sm:h-[300px]">
+          <div className="absolute inset-0 pointer-events-none ">
+            <div className="relative w-full h-full">
+              {/* Icon 1 */}
+              <div
+                className="absolute w-10 h-10 sm:w-14 sm:h-14 
+                rounded-xl bg-slate-800/70 backdrop-blur-sm 
+                flex items-center justify-center shadow-lg 
+                border border-slate-700 
+                left-[10%] top-[10%] sm:left-[30%] sm:top-[28%]"
+              >
+                <img
+                  src="/icon1.png"
+                  alt="icon1"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+
+              {/* Icon 2 */}
+              <div
+                className="absolute w-10 h-10 sm:w-14 sm:h-14 
+                rounded-xl bg-slate-800/70 backdrop-blur-sm 
+                flex items-center justify-center shadow-lg 
+                border border-slate-700 
+                left-[32%] top-[8%] sm:left-[40%] sm:top-[18%]"
+              >
+                <img
+                  src="/icon2.png"
+                  alt="icon2"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+              {/* Icon 3 */}
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 right-[30%] top-[8%] sm:left-[58%] sm:top-[20%]">
+                <img
+                  src="/icon3.png"
+                  alt="icon3"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+
+              {/* Icon 4 */}
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 right-[8%] top-[14%] sm:left-[70%] sm:top-[30%]">
+                <img
+                  src="/icon4.png"
+                  alt="icon4"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+              {/* Icon 5 */}
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 left-[20%] bottom-[12%] sm:left-[32%] sm:bottom-[18%]">
+                <img
+                  src="/icon7.png"
+                  alt="icon5"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+              {/* Icon 6 */}
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 left-[50%] bottom-[8%] sm:left-[50%] sm:bottom-[18%]">
+                <img
+                  src="/icon6.png"
+                  alt="icon6"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+              {/* Icon 7 */}
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 right-[14%] bottom-[14%] sm:left-[64%] sm:bottom-[18%]">
+                <img
+                  src="/icon5.png"
+                  alt="icon7"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </div>
+              {/* Icon 8 */}
+            </div>
+          </div>
+        </div>
+        {/* Text Content */}
+        <div class="relative z-10 text-center w-full max-w-[969px] h-[44px] mx-auto mt-[90px] mb-[50px]">
+          <h1 class="text-[36px] font-inter font-semibold leading-[100%] tracking-[-1px] text-center px-4">
+            Secure Your Firm: Tax &amp; Accountant Security Assessment
+          </h1>
+          <p class="text-slate-300 text-[18px] max-w-2xl mx-auto px-4 mt-4">
+            Answer 6 quick questions to receive your personalized security
+            report and compliance recommendations tailored to your firm's
+            specific needs.
+          </p>
+        </div>
+      </section>
     </>
   );
 }
