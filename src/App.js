@@ -145,12 +145,38 @@ import { useRef } from "react";
 import React, { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import "./App.css";
-
+const faqs = [
+  {
+    question: "What does dedicated private server hosting mean?",
+    answer:
+      "It means you get a server dedicated solely to your use, offering better performance, control, and security.",
+  },
+  {
+    question: "Who takes care of data migration and how fast is the process?",
+    answer:
+      "Our team handles the full migration process and typically completes it within 24-48 hours.",
+  },
+  {
+    question: "How does Verito handle scalability during tax season?",
+    answer:
+      "We automatically scale your resources to match demand, ensuring consistent performance.",
+  },
+  {
+    question: "What all is included in Verito’s Managed IT services?",
+    answer:
+      "Managed IT includes monitoring, backups, updates, support, and security management.",
+  },
+];
 function App() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <div className="relative bg-[#072530] min-h-screen text-white px-0 py-4 font-[inter] m-8 rounded-[20px] ">
@@ -382,7 +408,6 @@ function App() {
           </div>
         </section>
       </div>
-
       <section className="bg-white w-full min-h-screen z-0 relative py-16 px-6 text-[#072530]">
         <div className="max-w-6xl mt-40 items-center ">
           {/* Heading */}
@@ -497,7 +522,6 @@ function App() {
           </div>
         </div>
       </section>
-
       <div className="bg-gradient-to-b from-[#041E2A] to-[#072530] py-16 px-4">
         {/* Heading */}
         <div className="flex flex-col items-center text-center">
@@ -512,102 +536,77 @@ function App() {
         </div>
 
         {/* Services Container */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-[80px]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-[80px] ">
           {/* Service 1 */}
-          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px]">
+          <div className="bg-[#123A49] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px] group hover:bg-[#3CB55A] hover:opacity-90 cursor-pointer">
             <div className="flex items-start gap-5 ">
-              <div className="relative w-[70px] h-[70px] rounded-[10px] overflow-hidden">
-                <img
-                  src="/tax.png"
-                  alt="Icon"
-                  className="w-[70px] h-[70px] object-cover rounded-[10px]"
-                />
-                <img
-                  src="/tax.svg"
-                  alt="Icon"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px]"
-                />
+              <div className="p-3 rounded-lg bg-[#1E4452] group-hover:bg-[#60C278] transition-all duration-300 ">
+                {/* Icon only */}
+
+                <img src="/tax.svg" alt="Icon" className="w-[36px] h-[36px]" />
               </div>
               <h3 className="text-white font-[inter] text-[24px] leading-[100%] tracking-[-0.5px] w-[238px] h-[29px] mt-[25px]">
                 Tax Software Hosting
               </h3>
             </div>
-            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px]">
+            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px] group-hover:text-white">
               Maximize efficiency with dedicated private server tax software
               hosting designed for optimal performance.
             </p>
           </div>
 
           {/* Service 2 */}
-          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px]">
+          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px] group hover:bg-[#3CB55A] hover:opacity-90 cursor-pointer">
             <div className="flex items-start gap-5 ">
-              <div className="relative w-[70px] h-[70px] rounded-[10px] overflow-hidden">
-                <img
-                  src="/man.png"
-                  alt="Icon"
-                  className="w-[70px] h-[70px] object-cover rounded-[10px]"
-                />
-                <img
-                  src="/man.svg"
-                  alt="Icon"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px]"
-                />
+              <div className="p-3 rounded-lg bg-[#1E4452] group-hover:bg-[#60C278] transition-all duration-300 ">
+                {/* Icon only */}
+
+                <img src="/man.svg" alt="Icon" className="w-[36px] h-[36px]" />
               </div>
               <h3 className="text-white font-[inter] text-[24px] leading-[100%] tracking-[-0.5px] w-[238px] h-[29px] mt-[25px]">
                 Managed IT Services
               </h3>
             </div>
 
-            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px]">
+            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px] group-hover:text-white">
               Comprehensive IT management tailored specifically for tax &
               accounting professionals.
             </p>
           </div>
 
           {/* Service 3 */}
-          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px]">
+          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px] group hover:bg-[#3CB55A] hover:opacity-90 cursor-pointer">
             <div className="flex items-start gap-5 ">
-              <div className="relative w-[70px] h-[70px] rounded-[10px] overflow-hidden">
-                <img
-                  src="/app.png"
-                  alt="Icon"
-                  className="w-[70px] h-[70px] object-cover rounded-[10px]"
-                />
-                <img
-                  src="/app.svg"
-                  alt="Icon"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px]"
-                />
+              <div className="p-3 rounded-lg bg-[#1E4452] group-hover:bg-[#60C278] transition-all duration-300 ">
+                {/* Icon only */}
+
+                <img src="/app.svg" alt="Icon" className="w-[36px] h-[36px]" />
               </div>
               <h3 className="text-white font-[inter] text-[24px] leading-[100%] tracking-[-0.5px] w-[238px] h-[29px] mt-[25px]">
                 Applications Hosting
               </h3>
             </div>
-            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px]">
+            <p className="text-[#6E8C97] font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px] group-hover:text-white">
               Endless integration, seamless access: Your critical applications
               on dedicated, high-performance servers.
             </p>
           </div>
 
           {/* Service 4 */}
-          <div className="bg-[#199652] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px]">
-            <div className="flex items-start gap-5 ">
-              <div className="relative w-[70px] h-[70px] rounded-[10px] overflow-hidden">
-                <img
-                  src="/acc.png"
-                  alt="Icon"
-                  className="w-[70px] h-[70px] object-cover rounded-[10px]"
-                />
-                <img
-                  src="/acc.svg"
-                  alt="Icon"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px]"
-                />
+          <div className="bg-[#0B3A48] p-8 rounded-[20px] flex flex-col gap-4 w-[550px] h-[248px] group hover:bg-[#3CB55A] hover:opacity-90 cursor-pointer">
+            <div className="flex items-start gap-5">
+              {/* Only background div, no background image */}
+              <div className="p-3 rounded-lg bg-[#1E4452] group-hover:bg-[#60C278] transition-all duration-300 ">
+                {/* Icon only */}
+
+                <img src="/acc.svg" alt="Icon" className="w-[36px] h-[36px]" />
               </div>
-              <h3 className="text-white font-[inter] text-[24px] leading-[100%] tracking-[-0.5px] w-[238px] h-[29px] mt-[15px]">
+
+              <h3 className="text-white group-hover:text-white font-[inter] text-[24px] leading-[100%] tracking-[-0.5px] w-[238px] h-[29px] mt-[15px]">
                 Accounting Software Hosting
               </h3>
             </div>
+
             <p className="text-white font-[400] text-[18px] leading-[100%] tracking-[-0.5px] w-[470px] h-[44px] mt-[25px]">
               Elevate your practice with secure, high-performance accounting
               software hosting optimized for your workflow.
@@ -620,56 +619,62 @@ function App() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 text-black">
             Why Tax & Accounting Firms Choose Verito
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            {/* First Card */}
-            <div className="bg-gray-100 rounded-2xl p-8 flex flex-col items-start h-[290px]">
-              <img src="/upt.svg" alt="Uptime Guarantee" className="mb-4" />
-              <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
-                99.999%
+          <div className="max-w-[1200px] mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+              {/* First Card */}
+              <div className="bg-gray-100 rounded-2xl p-8 flex flex-col items-start h-[290px]">
+                <img src="/upt.svg" alt="Uptime Guarantee" className="mb-4" />
+                <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
+                  99.999%
+                </div>
+                <div className="text-left text-black text-[18px] font-medium">
+                  Uptime Guarantee
+                </div>
               </div>
-              <div className="text-left text-black text-[18px] font-medium">
-                Uptime Guarantee
-              </div>
-            </div>
 
-            {/* Second Card */}
-            <div className="bg-green-50 rounded-2xl p-8 flex flex-col items-start h-[290px]">
-              <img
-                src="/expe.svg"
-                alt="Expert Technical Support"
-                className="mb-4"
-              />
-              <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
-                24/7
+              {/* Second Card */}
+              <div className="bg-green-50 rounded-2xl p-8 flex flex-col items-start h-[290px]">
+                <img
+                  src="/expe.svg"
+                  alt="Expert Technical Support"
+                  className="mb-4"
+                />
+                <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
+                  24/7
+                </div>
+                <div className="text-left text-black text-[18px] font-medium">
+                  Expert Technical Support
+                </div>
               </div>
-              <div className="text-left text-black text-[18px] font-medium">
-                Expert Technical Support
-              </div>
-            </div>
 
-            {/* Third Card */}
-            <div className="bg-gray-100 rounded-2xl p-8 flex flex-col items-start h-[290px]">
-              <img
-                src="/acco.svg"
-                alt="Accounting Firms Served"
-                className="mb-4"
-              />
-              <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
-                508+
+              {/* Third Card */}
+              <div className="bg-gray-100 rounded-2xl p-8 flex flex-col items-start h-[290px]">
+                <img
+                  src="/acco.svg"
+                  alt="Accounting Firms Served"
+                  className="mb-4"
+                />
+                <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
+                  508+
+                </div>
+                <div className="text-left text-black text-[18px] font-medium">
+                  Accounting Firms Served
+                </div>
               </div>
-              <div className="text-left text-black text-[18px] font-medium">
-                Accounting Firms Served
-              </div>
-            </div>
 
-            {/* Fourth Card */}
-            <div className="bg-green-50 rounded-2xl p-8 flex flex-col items-start h-[290px]">
-              <img src="/indu.svg" alt="Industry Experience" className="mb-4" />
-              <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
-                9+ Years
-              </div>
-              <div className="text-left text-black text-[18px] font-medium">
-                Industry Experience
+              {/* Fourth Card */}
+              <div className="bg-green-50 rounded-2xl p-8 flex flex-col items-start h-[290px]">
+                <img
+                  src="/indu.svg"
+                  alt="Industry Experience"
+                  className="mb-4"
+                />
+                <div className="text-[38px] font-extrabold text-[#3CB55A] mb-2 pt-[46px]">
+                  9+ Years
+                </div>
+                <div className="text-left text-black text-[18px] font-medium">
+                  Industry Experience
+                </div>
               </div>
             </div>
           </div>
@@ -831,6 +836,187 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="custom-container text-center p-5 pt-12 py-8 px-4">
+            <h1 className="text-2xl sm:text-3xl mb-2 font-bold text-center">
+              Success Stories from Our Clients
+            </h1>
+            <p className="text-[#6E8C97] mb-8 text-center  sm:text-lg">
+              Real accounting firms achieving exceptional results
+            </p>
+          </div>
+
+          <div className="custom-container flex flex-col lg:flex-row items-stretch gap-6 justify-center mb-10 mt-10 w-full">
+            {/* Left Big Card */}
+            <div className="bg-[#123A49] rounded-[24px] p-6 sm:p-8 shadow-lg w-full lg:w-[560px] pt-4 sm:pt-16 order-2 lg:order-1 h-full flex flex-col">
+              {/* Icon + Title */}
+              <div className="flex items-center gap-4 mb-6 sm:mb-10">
+                <div className="w-[66px] h-[66px] rounded-full relative bg-[#234957]">
+                  <img
+                    src="/pro1.svg"
+                    alt="Eclipse"
+                    className="absolute inset-0 m-auto"
+                  />
+                  <img
+                    src="/pro2.svg"
+                    alt="Energy"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
+                <h2 className="text-[18px] sm:text-2xl font-medium w-1/2 text-left">
+                  Vashon Island Professionals LLC
+                </h2>
+              </div>
+
+              {/* Problem & Solution */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6 sm:mb-8 flex-grow">
+                <div>
+                  <h4 className="text-[#6E8C97] font-medium mb-1">Problem:</h4>
+                  <p className="text-[#9DB6BF] text-sm sm:text-base">
+                    Suffered downtime issues during critical tax season
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-[#6E8C97] font-medium mb-1">Solution:</h4>
+                  <p className="text-[#9DB6BF] text-sm sm:text-base">
+                    Migrated to Verito’s private cloud hosting
+                  </p>
+                </div>
+              </div>
+
+              {/* Results */}
+              <div className="bg-[#2C5463] p-4 sm:p-8 rounded-[24px] flex flex-col text-left">
+                <h4 className="text-white font-semibold mb-1">Results:</h4>
+                <p className="text-[#6E8C97] text-sm sm:text-base">
+                  Zero downtime, 35% faster processing, improved client
+                  satisfaction
+                </p>
+              </div>
+            </div>
+
+            {/* Right Small Cards */}
+            <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-96 order-1 lg:order-2 h-full justify-between">
+              {/* Active Selected Card */}
+              <button className="flex items-center gap-3 sm:gap-4 px-4 py-6 sm:py-8 rounded-[24px] transition bg-[#123A49] border border-green-500/50 shadow-lg">
+                <div className="w-[66px] h-[66px] rounded-full relative bg-[#234957]">
+                  <img
+                    src="/pro1.svg"
+                    alt="Eclipse"
+                    className="absolute inset-0 m-auto"
+                  />
+                  <img
+                    src="/pro2.svg"
+                    alt="Energy"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
+                <span className="font-medium text-left text-base md:text-[20px]">
+                  Vashon Island Professionals LLC
+                </span>
+              </button>
+
+              {/* Other Cards */}
+              <button className="flex items-center gap-3 sm:gap-4 px-4 py-6 sm:py-8 rounded-[24px] transition bg-[#123A49] hover:border-green-500/50 border border-transparent ">
+                <div className="w-[66px] h-[66px] rounded-full relative bg-[#234957]">
+                  <img
+                    src="/pro1.svg"
+                    alt="Eclipse"
+                    className="absolute inset-0 m-auto"
+                  />
+                  <img
+                    src="/pro2.svg"
+                    alt="Energy"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
+                <span className="font-medium text-left text-base md:text-[20px]">
+                  R-biopharm Inc
+                </span>
+              </button>
+
+              <button className="flex items-center gap-3 sm:gap-4 px-4 py-6 sm:py-8 rounded-[24px] transition bg-[#123A49] hover:border-green-500/50 border border-transparent">
+                <div className="w-[66px] h-[66px] rounded-full relative bg-[#234957]">
+                  <img
+                    src="/pro1.svg"
+                    alt="Eclipse"
+                    className="absolute inset-0 m-auto"
+                  />
+                  <img
+                    src="/pro2.svg"
+                    alt="Energy"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
+                <span className="font-medium text-left text-base md:text-[20px]">
+                  Hamilton Tax and Accounting
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen bg-white text-center p-6">
+        {/* Header / Testimonial */}
+        <div className="max-w-3xl mx-auto">
+          <blockquote className="italic text-[#000000] text-[24px] mb-6 font-[inter] w-[705px] h-[58px]">
+            "Verito has transformed how our firm operates. The security,
+            performance, and support are unmatched in the industry."
+          </blockquote>
+
+          {/* Profile */}
+          <div className="flex items-center justify-center mb-2">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Jane Smith"
+              className="w-10 h-10 rounded-full mr-3"
+            />
+            <div className="text-left">
+              <p className="font-semibold">Jane Smith, CPA</p>
+              <p className="text-green-600 text-sm">
+                Smith Accounting Partners
+              </p>
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex justify-center gap-2 mt-4 mb-12 flex-wrap">
+            {["AICPA", "NYSSCPA", "IMA"].map((org) => (
+              <span
+                key={org}
+                className="border border-green-400 text-green-600 px-4 py-1 rounded-full text-sm hover:bg-green-50"
+              >
+                {org}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <h2 className="text-2xl font-bold mb-1">Frequently Asked Questions</h2>
+        <p className="text-gray-500 mb-6">Still have some questions in mind?</p>
+
+        <div className="max-w-2xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-xl p-4 shadow transition hover:shadow-md text-left"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="flex justify-between w-full items-center font-medium text-gray-800"
+              >
+                <span>{faq.question}</span>
+                <span className="text-green-500 text-xl">
+                  {openIndex === index ? "-" : "+"}
+                </span>
+              </button>
+
+              {openIndex === index && (
+                <div className="mt-3 text-gray-600">
+                  <p>{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </>
