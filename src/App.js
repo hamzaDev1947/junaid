@@ -1080,7 +1080,7 @@ function App() {
                 rounded-xl bg-slate-800/70 backdrop-blur-sm 
                 flex items-center justify-center shadow-lg 
                 border border-slate-700 
-                left-[32%] top-[8%] sm:left-[40%] sm:top-[18%]"
+                left-[12%] top-[8%] sm:left-[40%] sm:top-[18%]"
               >
                 <img
                   src="/icon2.png"
@@ -1089,7 +1089,7 @@ function App() {
                 />
               </div>
               {/* Icon 3 */}
-              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 right-[30%] top-[8%] sm:left-[58%] sm:top-[20%]">
+              <div className="absolute w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-slate-800/70 backdrop-blur-sm flex items-center justify-center shadow-lg border border-slate-700 right-[10%] top-[8%] sm:left-[58%] sm:top-[20%]">
                 <img
                   src="/icon3.png"
                   alt="icon3"
@@ -1145,6 +1145,207 @@ function App() {
           </p>
         </div>
       </section>
+      <div className="w-full h-[1200px] pt-[90px] pr-[30px] pb-[35px] pl-[30px] bg-[#072530] flex flex-col items-center gap-[80px] mx-auto">
+        {/* Green Background Box with custom image */}
+        <div
+          className=" w-[1000px] h-[400px] rounded-[24px] bg-cover bg-center text-white text-center px-6 py-10"
+          style={{ backgroundImage: "url('/bg.png')" }} // <-- Green background image here
+        >
+          <div className="flex justify-center">
+            <h2 className="text-[44px] leading-[100%] font-semibold tracking-[-1px] text-center mb-4 max-w-[543px]">
+              Ready to Elevate Your <br />
+              Firm's IT Infrastructure?
+            </h2>
+          </div>
+          <p className="text-[18px] leading-[100%] tracking-[-0.5px] text-center text-[#B5E0C5] mb-6 max-w-[594px] mx-auto">
+            Experience the Verito difference with secure, reliable cloud hosting
+            <br />
+            designed for tax and accounting professionals.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 mx-auto max-w-[493px] h-[58px] rounded-[14px]">
+            {/* Buttons go here */}
+
+            <button className="w-[240px] h-[58px] bg-white text-black  font-[inter] text-[18px] leading-[100%] tracking-[-0.5px] rounded-[14px] px-[40px] py-[18px]">
+              Start Your Free Trial
+            </button>
+
+            <button className="w-[223px] h-[58px] bg-white/30 text-white font-[inter] text-[18px] leading-[100%] tracking-[-0.5px] border border-white/30 rounded-[14px] px-[40px] py-[18px] backdrop-blur-[30px]">
+              Schedule a Demo
+            </button>
+          </div>
+          <p className="text-[18px] leading-[100%] tracking-[-0.5px] font-normal text-center text-[#B1DEC2]">
+            14-day risk-free trial. No credit card required.
+          </p>
+        </div>
+        {/* Logos section inside green box */}
+        <div className="w-[866px] h-[96px] gap-[30px] py-6 rounded-xl  ">
+          <p className="text-white text-[24px] font-medium leading-[100%] tracking-[-0.5px] text-center mb-10 ">
+            Backed by the Best in Security & IT
+          </p>
+
+          <div className="flex justify-center items-center gap-8 flex-wrap">
+            <img src="/vmware.png" alt="VMware" className="h-6 sm:h-8" />
+            <img src="/microsoft.png" alt="Microsoft" className="h-6 sm:h-8" />
+            <img src="/veeam.png" alt="Veeam" className="h-6 sm:h-8" />
+            <img src="/crow.png" alt="Crowdstrike" className="h-6 sm:h-8" />
+          </div>
+        </div>
+        <div className="w-[1150px] border border-white opacity-10"></div>
+        <footer className="bg-[#072530] text-white ">
+          <div className="w-full flex flex-wrap lg:flex-nowrap justify-between gap-8 px-4 lg:px-0">
+            {/* Col 1: Logo + Info (takes 2/6 of width) */}
+            <div className="w-[196px] h-[162px] sm:w-1/2 lg:w-2/12 flex flex-col gap-[20px]">
+              <img src="/fig-logo.png" alt="Logo" className="w-12 h-12" />
+              <p className="text-[13px] leading-[100%] tracking-[-0.5px] text-[#6B7C81]">
+                Secure Cloud Solutions for Tax
+                <br />& Accounting Professionals
+              </p>
+              <p className="text-[16px] leading-[100%] tracking-[-0.5px] text-white/80">
+                123 Tech Plaza, Suite 400
+                <br />
+                San Francisco, CA 94105
+              </p>
+            </div>
+
+            {/* Col 2: Services */}
+            <div className="w-[205px] h-[141px] sm:w-1/3 lg:w-2/12 gap-[20px]">
+              <h3 className="text-[16px] leading-[100%] tracking-[-0.5px] font-medium text-white mb-3">
+                Services
+              </h3>
+
+              <ul className="text-[14px] leading-[34px] tracking-[-0.5px] font-normal text-[#A6A6A6] space-y-0">
+                <li>Dedicated Private Server Hosting</li>
+                <li>Managed IT Services</li>
+                <li>VeritComplete</li>
+              </ul>
+            </div>
+
+            {/* Col 3: Pricing */}
+            <div className="w-[113px] h-[105px] sm:w-1/3 lg:w-2/12 flex flex-col gap-[10px]">
+              <h3 className="font-medium text-[16px] leading-[100%] tracking-[-0.5px] text-white w-[50px] h-[19px]">
+                Pricing
+              </h3>
+
+              <ul className="flex flex-col text-[14px] leading-[34px] tracking-[-0.5px] text-[#A6A6A6] w-[113px] h-[68px]">
+                <li>VeritSpace Pricing</li>
+                <li>VeritGuard Pricing</li>
+              </ul>
+            </div>
+
+            {/* Col 4: Get Started */}
+            <div className="w-[111px] h-[107px] sm:w-1/3 lg:w-2/12 gap-[20px]">
+              <h3 className="text-[16px] font-medium leading-[100%] tracking-[-0.5px] text-white w-[84px] h-[19px] mb-3">
+                Get Started
+              </h3>
+
+              <ul className="w-[111px] h-[68px] text-[14px] leading-[34px] tracking-[-0.5px] font-normal text-[#A6A6A6] space-y-0">
+                <li>Free Hosting Trial</li>
+                <li>Schedule A Demo</li>
+              </ul>
+            </div>
+
+            {/* Col 5: Company */}
+            <div className="w-[102px] h-[141px] gap-[20px] sm:w-1/3 lg:w-2/12">
+              <h3 className="w-[70px] h-[19px] text-[16px] leading-[100%] tracking-[-0.5px] font-medium text-white mb-3">
+                Company
+              </h3>
+
+              <ul className="w-[102px] h-[102px] text-[14px] leading-[34px] tracking-[-0.5px] font-normal text-[#A6A6A6] space-y-0">
+                <li>About Us</li>
+                <li>Our Datacenters</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+
+            {/* Col 6: Resources */}
+            <div className="w-[86px] h-[141px] gap-[20px] sm:w-1/3 lg:w-2/12">
+              <h3 className="w-[77px] h-[19px] text-[16px] leading-[100%] tracking-[-0.5px] font-medium text-white mb-3">
+                Resources
+              </h3>
+
+              <ul className="w-[86px] h-[102px] text-[14px] leading-[34px] tracking-[-0.5px] font-normal text-[#A6A6A6] space-y-0">
+                <li>FAQs</li>
+                <li>Blogs</li>
+                <li>Privacy Policy</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom logos and rating */}
+
+          <div className="w-[1159.431px] h-[82.968px] flex flex-wrap items-center justify-between gap-[111px] mx-auto mt-10">
+            {/* Your content here */}
+
+            {/* Phone & Email */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <img src="/phone.png" alt="Phone" className="w-5 h-5" />
+                <span className="text-[16px] leading-[100%] tracking-[-0.5px] font-normal text-white/80 w-[123px] h-[19px]">
+                  18555-583-7486
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <img src="/gmail.png" alt="Email" className="w-5 h-5" />
+                <span className="text-[16px] leading-[100%] tracking-[-0.5px] font-normal text-white/80 w-[127px] h-[19px]">
+                  sales@verito.com
+                </span>
+              </div>
+            </div>
+
+            {/* 5 Star Rating */}
+            <div className="text-center">
+              <p className="text-sm font-semibold">"EXCELLENT"</p>
+              <div className="flex justify-center mt-1 mb-1">
+                <img src="/star.png" alt="5 stars" className="h-5" />
+                <img src="/star.png" alt="5 stars" className="h-5" />
+                <img src="/star.png" alt="5 stars" className="h-5" />
+                <img src="/star.png" alt="5 stars" className="h-5" />
+                <img src="/star.png" alt="5 stars" className="h-5" />
+              </div>
+              <p className="text-xs">Based on 406 user reviews</p>
+              <img src="/exl.svg" alt="G2 logo" className="h-4 mx-auto mt-1" />
+            </div>
+
+            {/* Center Round Logo */}
+            <div>
+              <img src="/aicpa.png" alt="AICPA SOC" className="w-86 h-78" />
+            </div>
+
+            {/* Partner Logos */}
+            <div className="flex gap-4 items-center flex-wrap justify-center">
+              <img src="/proud.png" alt="NATP" className="h-8" />
+              <img src="/natp.png" alt="NAEA" className="h-8" />
+              <img src="/naea.png" alt="NSTP" className="h-8" />
+              <img src="/nstp.png" alt="Partner 4" className="h-8" />
+            </div>
+          </div>
+
+          <div className="w-full border border-white opacity-10 mx-auto mb-4 mt-8"></div>
+
+          {/* Footer bottom links */}
+          <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 mt-5">
+            {/* Left Side: Copyright */}
+            <p className="text-[#455B63]">
+              © 2025 Verito Technologies. All Rights Reserved.
+            </p>
+
+            {/* Right Side: Links */}
+            <div className="flex gap-6 text-[#455B63]">
+              <a href="#" className="hover:underline">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:underline">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:underline">
+                Acceptable Use Policy
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }
