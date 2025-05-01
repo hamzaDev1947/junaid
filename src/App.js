@@ -299,7 +299,7 @@ function App() {
           </div>
         )}
 
-        <div className="relative text-center mt-24">
+        <div className="relative text-center mt-24 px-4">
           {/* Left Arrow */}
           <button
             ref={prevRef}
@@ -327,54 +327,53 @@ function App() {
             className="w-full"
           >
             <SwiperSlide>
-              <h1 className="font-[inter] w-[1085px] h-[122px] mx-auto text-[44px] leading-[61px] tracking-[0] text-white">
+              <h1 className="font-[inter] text-white text-[28px] sm:text-[36px] md:text-[44px] leading-[130%] tracking-[0] w-full max-w-[1085px] mx-auto">
                 Secure, High-Performance Cloud Hosting <br />
                 Designed Exclusively for Tax & Accounting Firms
               </h1>
-              <p className="text-green-400 font-[inter] text-[14px] leading-[100%] w-[845px] h-[22px] mx-auto mt-4">
+              <p className="text-green-400 font-[inter] text-[14px] leading-[100%] max-w-[845px] w-full mx-auto mt-4">
                 Dedicated private servers with 99.999% uptime, SOC 2 & FTC
                 compliance, and 24/7 expert support
               </p>
               <div className="mt-10">
-                <div className="w-[452px] h-[82px] flex items-center justify-center gap-[30px] relative mx-auto rounded-[14px]">
-                  <button className="w-[242px] h-[82px] px-[40px] py-[18px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] flex flex-col items-center justify-center gap-[5px] text-white font-[inter] cursor-pointer">
-                    <span className="w-[158px] h-[24px] font-[inter] text-[20px] leading-[100%] text-white">
+                <div className="w-full max-w-[452px] h-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-[20px] sm:gap-[30px] mx-auto rounded-[14px]">
+                  <button className="w-full sm:w-[242px] h-[82px] px-[30px] py-[18px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] flex flex-col items-center justify-center gap-[5px] text-white font-[inter]">
+                    <span className="text-[20px] leading-[100%] text-white">
                       Try Vertic Cloud
                     </span>
-                    <span className="w-[162px] h-[17px] font-[inter] text-[14px] leading-[100%] text-white">
+                    <span className="text-[14px] leading-[100%] text-white">
                       No Credit Card Required
                     </span>
                   </button>
-                  <div className="w-px h-[35px] border-l border-white opacity-20"></div>
-                  <button className="px-[20px] flex items-center justify-center text-[18px] font-[inter] leading-[100%] whitespace-nowrap text-white bg-transparent">
+                  <div className="hidden sm:block w-px h-[35px] border-l border-white opacity-20"></div>
+                  <button className="text-[18px] font-[inter] leading-[100%] whitespace-nowrap text-white bg-transparent">
                     See How it Works
                   </button>
                 </div>
               </div>
             </SwiperSlide>
 
-            {/* Second Slide Example (optional) */}
             <SwiperSlide>
-              <h1 className="font-[inter] w-[1085px] h-[122px] mx-auto text-[44px] leading-[61px] tracking-[0] text-white">
+              <h1 className="font-[inter] text-white text-[28px] sm:text-[36px] md:text-[44px] leading-[130%] tracking-[0] w-full max-w-[1085px] mx-auto">
                 Super Fast and Secure Cloud Solutions <br />
                 Built for Modern Accounting Firms
               </h1>
-              <p className="text-green-400 font-[inter] text-[14px] leading-[100%] w-[845px] h-[22px] mx-auto mt-4">
+              <p className="text-green-400 font-[inter] text-[14px] leading-[100%] max-w-[845px] w-full mx-auto mt-4">
                 24/7 managed support, 99.999% uptime guarantee, and secure data
                 backups.
               </p>
               <div className="mt-10">
-                <div className="w-[452px] h-[82px] flex items-center justify-center gap-[30px] relative mx-auto rounded-[14px]">
-                  <button className="w-[242px] h-[82px] px-[40px] py-[18px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] flex flex-col items-center justify-center gap-[5px] text-white font-[inter] cursor-pointer">
-                    <span className="w-[158px] h-[24px] font-[inter] text-[20px] leading-[100%] text-white">
+                <div className="w-full max-w-[452px] h-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-[20px] sm:gap-[30px] mx-auto rounded-[14px]">
+                  <button className="w-full sm:w-[242px] h-[82px] px-[30px] py-[18px] rounded-[14px] bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] flex flex-col items-center justify-center gap-[5px] text-white font-[inter]">
+                    <span className="text-[20px] leading-[100%] text-white">
                       Try Vertic Cloud
                     </span>
-                    <span className="w-[162px] h-[17px] font-[inter] text-[14px] leading-[100%] text-white">
+                    <span className="text-[14px] leading-[100%] text-white">
                       No Credit Card Required
                     </span>
                   </button>
-                  <div className="w-px h-[35px] border-l border-white opacity-20"></div>
-                  <button className="px-[20px] flex items-center justify-center text-[18px] font-[inter] leading-[100%] whitespace-nowrap text-white bg-transparent">
+                  <div className="hidden sm:block w-px h-[35px] border-l border-white opacity-20"></div>
+                  <button className="text-[18px] font-[inter] leading-[100%] whitespace-nowrap text-white bg-transparent">
                     See How it Works
                   </button>
                 </div>
@@ -382,18 +381,20 @@ function App() {
             </SwiperSlide>
           </Swiper>
         </div>
+
         <section
           id="features"
-          className="w-full px-6 py-16 transition-all duration-500 ease-in-out"
+          className="w-full px-4 sm:px-6 py-16 transition-all duration-500 ease-in-out"
         >
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-            <div className="w-[198px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-4 -translate-y-4 ml-[140px]">
+            <div className="w-full sm:w-[198px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] px-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-2 sm:-translate-x-4 -translate-y-4 sm:ml-[140px]">
               <div className="flex flex-col items-center gap-[10px]">
                 <img src="/pri.svg" alt="Private Servers" className="w-6 h-6" />
                 <span>Private Servers</span>
               </div>
             </div>
-            <div className="w-[265.7px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform translate-x-4 -translate-y-4 ml-[130px] ">
+
+            <div className="w-full sm:w-[265.7px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] px-[34px] text-white cursor-pointer transition duration-500 transform translate-x-2 sm:translate-x-4 -translate-y-4 sm:ml-[130px]">
               <div className="flex flex-col items-center gap-[10px]">
                 <img
                   src="/soc.svg"
@@ -403,7 +404,8 @@ function App() {
                 <span>SOC 2 & FTC-Compliant</span>
               </div>
             </div>
-            <div className="w-[234.67px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-4 translate-y-4 ml-[240px]">
+
+            <div className="w-full sm:w-[234.67px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] px-[34px] text-white cursor-pointer transition duration-500 transform -translate-x-2 sm:-translate-x-4 translate-y-4 sm:ml-[240px]">
               <div className="flex flex-col items-center gap-[10px]">
                 <img
                   src="/exp.svg"
@@ -413,7 +415,8 @@ function App() {
                 <span>24/7 Expert Support</span>
               </div>
             </div>
-            <div className="w-[203.64px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] pr-[34px] pb-[28px] pl-[34px] text-white cursor-pointer transition duration-500 transform translate-x-4 translate-y-4 mr-[30px]">
+
+            <div className="w-full sm:w-[203.64px] h-[112px] border border-white/10 rounded-[14px] bg-white/10 backdrop-blur-[30px] pt-[28px] px-[34px] text-white cursor-pointer transition duration-500 transform translate-x-2 sm:translate-x-4 translate-y-4 sm:mr-[30px]">
               <div className="flex flex-col items-center gap-[10px]">
                 <img src="/opt.svg" alt="99.999% Uptime" className="w-6 h-6" />
                 <span>99.999% Uptime</span>
@@ -421,132 +424,116 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="it-security" className="w-full px-6 pb-0 relative z-10 ">
-          <div className="w-[1120px] h-[150px] mx-auto bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white font-[inter] rounded-xl px-8 py-6 flex flex-col md:flex-row justify-between items-center shadow-lg relative z-10 -mb-[75px]">
-            <p className="w-[561px] h-[68px] text-[28px] leading-[100%] font-medium text-[#ffffff] text-center md:text-left">
+
+        <section
+          id="it-security"
+          className="w-full px-4 sm:px-6 pb-0 relative z-10"
+        >
+          <div className="w-full max-w-[1120px] h-auto mx-auto bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white font-[inter] rounded-xl px-6 sm:px-8 py-6 flex flex-col md:flex-row justify-between items-center shadow-lg relative z-10 -mb-[75px]">
+            <p className="w-full md:w-[561px] text-[20px] sm:text-[24px] md:text-[28px] leading-[130%] font-medium text-center md:text-left">
               We also provide fully managed IT security solutions for tax &
               accounting firms
             </p>
-            <button className="w-[185px] h-[50px] bg-white text-[#199652] font-semibold rounded-[14px] px-[31px] py-[14px] mt-4 md:mt-0">
+            <button className="w-full sm:w-auto mt-4 md:mt-0 bg-white text-[#199652] font-semibold rounded-[14px] px-[31px] py-[14px] text-[16px]">
               Learn More →
             </button>
           </div>
         </section>
       </div>
-      <section className="bg-white w-full min-h-screen z-0 relative py-16 px-6 text-[#072530]">
-        <div className="max-w-6xl mt-40 items-center ">
+      <section className="bg-white w-full min-h-screen relative z-0 py-16 px-4 sm:px-6 text-[#072530]">
+        <div className="max-w-6xl mx-auto mt-20 flex flex-col items-center">
           {/* Heading */}
-          <h2 className="text-4xl font-[inter] font-semibold text-center mb-10 w-[591px] h-[88px] absolute top-[80px] left-[365px] ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[inter] font-semibold text-center mb-16 max-w-3xl">
             Purpose-Built Cloud Solutions for Tax & Accounting Professionals
           </h2>
 
           {/* Features Grid */}
-          <div className="w-full max-w-7xl ml-10 mr-10 flex flex-col md:flex-row items-center justify-center gap-8 mb-20 px-4">
-            {/* First Child Div */}
-            <div className="relative md:w-1/3 p-3 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
-              {/* Outer Image Container at Top Right */}
-              <div className="absolute top-4 right-4 flex items-center justify-center size-6">
-                {/* Outer Image */}
-                <img src="/ii.svg" alt="Security Outer" className="w-16 h-16" />
+          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8 mb-20">
+            {/* Card 1 */}
+            <div className="relative w-full md:w-1/3 p-6 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
+              <div className="absolute top-4 right-4">
+                <img src="/ii.svg" alt="Security" className="w-10 h-10" />
               </div>
-
-              {/* Heading at Top Left */}
-              <h3 className="text-[22px]  font-semibold font-[inter] mb-4 text-left pr-20">
-                {" "}
-                {/* Added padding-right to prevent text overlap */}
+              <h3 className="text-[20px] sm:text-[22px] font-semibold font-[inter] mb-4 pr-20">
                 Industry-Leading Security
               </h3>
-
-              {/* Paragraph at Bottom Left */}
-              <p className="absolute bottom-9 w-[300px] h-[66px] font-[inter] text-[18px]  text-gray-600 text-left">
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
                 SOC 2 compliant infrastructure with end-to-end encryption and
                 multi-factor authentication.
               </p>
             </div>
-            {/* Second Child Div */}
-            <div className="relative md:w-1/3 p-3 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
-              {/* Image at Top Right */}
-              <div className="absolute top-0 right-2 size-6 ">
-                <img src="/max.svg" alt="Performance" className="w-16 h-16" />
-              </div>
 
-              {/* Heading at Top Left */}
-              <h3 className="text-[22px] w-[200px] h-[54px] font-semibold font-[inter] text-left">
+            {/* Card 2 */}
+            <div className="relative w-full md:w-1/3 p-6 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
+              <div className="absolute top-4 right-4">
+                <img src="/max.svg" alt="Performance" className="w-10 h-10" />
+              </div>
+              <h3 className="text-[20px] sm:text-[22px] font-semibold font-[inter] mb-4">
                 Maximum Performance
               </h3>
-
-              {/* Paragraph at Bottom Left */}
-              <p className="absolute bottom-9 w-[300px] h-[66px] font-[inter] text-[18px] text-gray-600 text-left">
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
                 Lightning-fast servers with 99.999% uptime guarantee for peak
                 tax season reliability.
               </p>
             </div>
 
-            {/* Third Child Div */}
-            <div className="relative md:w-1/3 p-3 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
-              {/* Image at Top Right */}
-              <div className="absolute top-0 right-3 size-6">
-                <img src="/247exp.svg" alt="Support" className="w-16 h-16" />
+            {/* Card 3 */}
+            <div className="relative w-full md:w-1/3 p-6 rounded-2xl bg-[#F6F6F6] min-h-[250px]">
+              <div className="absolute top-4 right-4">
+                <img src="/247exp.svg" alt="Support" className="w-10 h-10" />
               </div>
-
-              {/* Heading at Top Left */}
-              <h3 className="text-2xl w-[200px] h-[54px] font-[inter] font-semibold mb-4 text-left">
+              <h3 className="text-[20px] sm:text-[22px] font-semibold font-[inter] mb-4">
                 24/7 Expert Support
               </h3>
-
-              {/* Paragraph at Bottom Left */}
-              <p className="absolute bottom-9 w-[300px] h-[66px] font-[inter] text-[18px] text-gray-600 text-left">
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
                 Dedicated specialists who understand accounting software and tax
                 workflows.
               </p>
             </div>
           </div>
-          {/* Stats Section */}
-          <div className="flex justify-center items-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center ">
-              <div className="p-6">
-                <p className="w-[63px] h-[58px] text-[48px] leading-[100%] font-medium font-[inter] mb-2">
-                  <span className="text-black">9</span>
-                  <span className="text-[#199652]">+</span>
-                </p>
-                <p className="w-[148px] h-[22px] text-[18px] leading-[100%] font-normal font-[inter] text-gray-600 text-center">
-                  Years in business
-                </p>
-              </div>
-              <div className="p-6">
-                <p className="w-[128px] h-[56px] text-[46px] leading-[100%] font-medium font-[inter] mb-2">
-                  <span className="text-black">98%</span>
-                  <span className="text-[#199652]">+</span>
-                </p>
 
-                <p className="w-[155px] h-[22px] text-[18px] leading-[100%] font-normal font-[inter] text-gray-600 text-center ">
-                  Satisfaction rating
-                </p>
-              </div>
-              <div className="p-6">
-                <p className="w-[89px] h-[56px] text-[46px] leading-[100%] font-medium font-[inter] mb-2">
-                  <span className="text-black">50</span>
-                  <span className="text-[#199652]">+</span>
-                </p>
-
-                <p className="w-[169px] h-[22px] text-[18px] leading-[100%] font-normal font-[inter] text-gray-600 text-center">
-                  Years of experience
-                </p>
-              </div>
-              <div className="p-6">
-                <p className="w-[142px] h-[56px] text-[46px] leading-[100%] font-medium font-[inter] mb-2">
-                  <span className="text-black">1000</span>
-                  <span className="text-[#199652]">+</span>
-                </p>
-
-                <p className="w-[124px] h-[22px] text-[18px] leading-[100%] font-normal font-[inter] text-gray-600 text-center">
-                  Clients Served
-                </p>
-              </div>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full text-center">
+            <div className="p-4">
+              <p className="text-[36px] sm:text-[48px] font-medium font-[inter] mb-2">
+                <span className="text-black">9</span>
+                <span className="text-[#199652]">+</span>
+              </p>
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
+                Years in business
+              </p>
+            </div>
+            <div className="p-4">
+              <p className="text-[36px] sm:text-[46px] font-medium font-[inter] mb-2">
+                <span className="text-black">98%</span>
+                <span className="text-[#199652]">+</span>
+              </p>
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
+                Satisfaction rating
+              </p>
+            </div>
+            <div className="p-4">
+              <p className="text-[36px] sm:text-[46px] font-medium font-[inter] mb-2">
+                <span className="text-black">50</span>
+                <span className="text-[#199652]">+</span>
+              </p>
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
+                Years of experience
+              </p>
+            </div>
+            <div className="p-4">
+              <p className="text-[36px] sm:text-[46px] font-medium font-[inter] mb-2">
+                <span className="text-black">1000</span>
+                <span className="text-[#199652]">+</span>
+              </p>
+              <p className="text-[16px] sm:text-[18px] text-gray-600 font-[inter]">
+                Clients Served
+              </p>
             </div>
           </div>
         </div>
       </section>
+
       <div className="bg-gradient-to-b from-[#041E2A] to-[#072530] py-16 px-4">
         {/* Heading */}
         <div className="flex flex-col items-center text-center">
