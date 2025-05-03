@@ -246,7 +246,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ">
             <button className="hidden md:flex items-center justify-center bg-gradient-to-r from-[#3CB55A] to-[#0C8B4F] text-white text-sm font-[inter] w-[188px] h-[50px] px-[31px] py-[14px] rounded-[14px] ">
               Get Started →
             </button>
@@ -299,19 +299,18 @@ function App() {
           </div>
         )}
 
-        <div className="relative text-center mt-24 px-4">
+        <div className="relative text-center  mt-12 sm:mt-24 px-2 sm:px-4">
           {/* Left Arrow */}
           <button
             ref={prevRef}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/10 rounded-full w-10 h-10 flex items-center justify-center z-10"
+            className="absolute top-1/2 sm:top-1/2 top-[57%] left-4 transform -translate-y-1/2 bg-white/10 rounded-full w-10 h-10 flex items-center justify-center z-10"
           >
             <FaArrowLeft className="text-white" />
           </button>
 
-          {/* Right Arrow */}
           <button
             ref={nextRef}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/10 rounded-full w-10 h-10 flex items-center justify-center z-10"
+            className="absolute top-1/2 sm:top-1/2 top-[57%] right-4 transform -translate-y-1/2 bg-white/10 rounded-full w-10 h-10 flex items-center justify-center z-10"
           >
             <FaArrowRight className="text-white" />
           </button>
@@ -1040,11 +1039,11 @@ function App() {
           </div>
         </div>
 
-        <div className="w-full max-w-[1150px] border border-white opacity-10"></div>
+        <div className="w-full max-w-[1250px] border border-white opacity-10"></div>
 
         {/* Footer remains untouched for laptop, just made mobile responsive */}
         <footer className="bg-[#072530] text-white w-full px-4">
-          <div className="w-full max-w-7xl flex flex-wrap lg:flex-nowrap justify-between gap-8 mx-auto">
+          <div className="w-full max-w-7xl px-4 flex flex-wrap lg:flex-nowrap justify-between gap-8 mx-auto">
             {/* Footer columns (same layout, just responsive widths below) */}
             <div className="w-full sm:w-1/2 lg:w-2/12 mb-6">
               <img src="/fig-logo.png" alt="Logo" className="w-12 h-12 mb-4" />
